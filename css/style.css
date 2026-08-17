@@ -806,7 +806,7 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-.services-footer-link ul li,
+/* .services-footer-link ul li,
 .quick-footer-link ul li,
 .get-in-touch ul li {
     margin-bottom: 10px;
@@ -817,6 +817,32 @@ body {
 .get-in-touch ul li a {
     text-decoration: none;
     font-family: "Open Sans", sans-serif;
+} */
+
+.social-media-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.social-media-links a:first-child {
+    color: #25D366;
+    background-color: #eafaf0;
+}
+
+.social-media-links a:last-child {
+    color: #0A66C2;
+    background-color: #eaf2fb;
+}
+
+.social-media-links a:hover {
+    transform: translateY(-3px);
 }
 
 /* Vendor Logo */
