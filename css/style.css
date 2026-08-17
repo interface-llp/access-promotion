@@ -744,6 +744,10 @@ body {
 
 @media (max-width: 767px) {
 
+    .hero-content {
+        height: 550px;
+    }
+
     .feedbackSwiper {
         padding-left: 20px;
         padding-right: 20px;
