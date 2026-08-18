@@ -460,6 +460,25 @@ body {
     color: var(--bs-white);
 }
 
+.intro-right-content img {
+    width: 100%;
+    max-width: 520px;
+    height: 420px;
+    object-fit: cover;
+
+    border-radius: 20px;
+    border: 2px solid var(--bs-primary);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.4s ease;
+}
+
+.intro-right-content img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 55px rgba(0, 0, 0, 0.35);
+}
+
 .intro-left-content .intro-heading {
     font-family: "Montserrat", sans-serif;
 }
@@ -486,7 +505,7 @@ body {
 }
 
 .our-specialities .card {
-    width: 400px;
+    /* width: 400px; */
     height: 100px;
     border: 2px solid var(--bs-primary);
     border-radius: 15px;
@@ -502,6 +521,8 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
 }
+
+
 
 /* Intro end */
 
@@ -649,7 +670,7 @@ body {
     text-align: center;
 }
 
-.feedback-person h5 {
+.feedback-person h4 {
     color: #c29a5b;
     font-size: 17px;
     margin: 0 0 5px;
@@ -689,6 +710,243 @@ body {
     margin-top: 8px;
 }
 
+.safety-controls {
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   SAFETY CARD
+========================================= */
+
+.safety-card {
+    position: relative;
+
+    height: 100%;
+    min-height: 190px;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e9e7;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Gold line on top */
+
+.safety-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #e8a33d;
+
+    transition: width 0.35s ease;
+}
+
+
+/* Hover */
+
+.safety-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #e8a33d;
+
+    box-shadow:
+        0 18px 40px rgba(16, 35, 31, 0.10);
+}
+
+.safety-card:hover::before {
+    width: 100%;
+}
+
+
+/* =========================================
+   TOP
+========================================= */
+
+.safety-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.safety-number {
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #9ba6a2;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.safety-card-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #f7ead5;
+    color: #c28120;
+
+    font-size: 21px;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.safety-card:hover .safety-card-icon {
+    background: #e8a33d;
+    color: #ffffff;
+
+    transform: rotate(-4deg) scale(1.05);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.safety-card-content {
+    flex: 1;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+.safety-card-content span {
+    color: #263732;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.safety-card-arrow {
+    position: absolute;
+
+    right: 22px;
+    bottom: 20px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #b7bfbc;
+
+    font-size: 12px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.safety-card:hover .safety-card-arrow {
+    background: #10231f;
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .safety-card {
+        min-height: 170px;
+
+        padding: 22px;
+    }
+
+    .safety-card-top {
+        margin-bottom: 20px;
+    }
+
+    .safety-card-icon {
+        width: 46px;
+        height: 46px;
+
+        font-size: 19px;
+    }
+
+    .safety-card-content span {
+        font-size: 14px;
+    }
+}
+
+.content>p {
+    color: #5f6b67;
+    line-height: 1.8;
+}
+
+@media (max-width: 767px) {
+
+    .safety-card {
+        padding: 16px;
+    }
+
+    .safety-card-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .safety-card span {
+        font-size: 14px;
+    }
+}
+
 
 /* Navigation */
 
@@ -715,6 +973,32 @@ body {
     color: #000000;
     font-size: 25px;
     font-weight: bold;
+}
+
+.feedback-video {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+}
+
+.feedback-video video {
+    width: 100%;
+    height: 280px;
+    display: block;
+    object-fit: cover;
+}
+
+.feedback-person h5 {
+    margin-bottom: 5px;
+}
+
+.feedback-person span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #777;
 }
 
 
