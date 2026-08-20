@@ -869,6 +869,18 @@ body {
     overflow: hidden;
 }
 
+.feedback-company {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--bs-primary);
+}
+
+.feedback-person span {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
 .read-more {
     color: #ffffff;
     font-size: 14px;
