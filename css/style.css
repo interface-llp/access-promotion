@@ -507,24 +507,28 @@ body {
 .introSwiper {
     width: 100%;
     max-width: 650px;
+    margin: 0 auto;
     overflow: hidden;
+}
+
+.introSwiper .swiper-wrapper {
+    width: 100%;
 }
 
 .introSwiper .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .intro-image {
     width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
     border-radius: 12px;
-}
-
-.introSwiper .swiper-pagination {
-    bottom: 10px;
 }
 
 .introSwiper .swiper-pagination-bullet {
@@ -534,6 +538,49 @@ body {
 
 .introSwiper .swiper-pagination-bullet-active {
     opacity: 1;
+}
+
+@media (max-width: 1199.98px) {
+    .introSwiper {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .introSwiper {
+        width: 100%;
+        max-width: 500px;
+        margin: 30px auto 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .introSwiper {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto 0;
+        padding: 0;
+    }
+
+    .intro-image {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 575.98px) {
+    .introSwiper {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .intro-image {
+        width: 100%;
+        border-radius: 8px;
+    }
 }
 
 .our-specialities .card {

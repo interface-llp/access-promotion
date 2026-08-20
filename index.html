@@ -251,78 +251,85 @@
         </section>
 
         <section class="bg-secondary py-5" id="about-us">
-            <div class="container d-flex justify-content-center align-items-center">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="intro-left-content">
-                            <h2 class="mb-4 intro-heading text-primary">About Us
+            <div class="container py-4 py-md-5">
+                <div class="row align-items-center g-4 g-lg-5">
+
+                    <!-- Left Content -->
+                    <div class="col-12 col-md-6">
+                        <div class="intro-left-content text-center text-md-start">
+
+                            <h2 class="mb-3 mb-md-4 intro-heading text-primary">
+                                About Us
                             </h2>
+
                             <div class="intro-content">
-                                <p class="mb-4">We are thrilled to introduce Access Promotions, a stalwart in the Trade
-                                    Fair Exhibitions & Events industry since 1995.
+
+                                <p class="mb-3 mb-md-4">
+                                    We are thrilled to introduce Access Promotions, a stalwart in the
+                                    Trade Fair Exhibitions & Events industry since 1995.
                                 </p>
-                                <p class="mb-4">At Access Promotions, we specialize in providing comprehensive
-                                    infrastructural services for exhibitions, conferences, seminars, trade shows, and
-                                    more. Our commitment to innovation has enabled us to carve a distinctive niche in
-                                    this fiercely competitive landscape. Our mission is to provide our clients with
-                                    holistic support at any event.</p>
-                                <p class="mb-4">With 30 years of rich history, Access Promotions has evolved
-                                    significantly, embracing sophistication and specialization in its services. Our
-                                    innovative approach
-                                    empowers us to offer a 360-degree solution tailored to meet the unique needs of each
-                                    Organizer, ensuring unparalleled success.</p>
+
+                                <p class="mb-3 mb-md-4">
+                                    At Access Promotions, we specialize in providing comprehensive
+                                    infrastructural services for exhibitions, conferences, seminars,
+                                    trade shows, and more. Our commitment to innovation has enabled us
+                                    to carve a distinctive niche in this fiercely competitive landscape.
+                                    Our mission is to provide our clients with holistic support at any event.
+                                </p>
+
+                                <p class="mb-0">
+                                    With 30 years of rich history, Access Promotions has evolved
+                                    significantly, embracing sophistication and specialization in its
+                                    services. Our innovative approach empowers us to offer a 360-degree
+                                    solution tailored to meet the unique needs of each Organizer,
+                                    ensuring unparalleled success.
+                                </p>
+
                             </div>
-                            <!-- <div class="d-flex mt-3">
 
-                                <a href="#" class="btn intro-left-btn me-2">
-                                    Get Free Quote
-                                </a>
-
-                                <a href="#" class="btn intro-left-btn">
-                                    Download Brochure
-                                </a>
-
-                            </div> -->
                         </div>
                     </div>
-                    <div class="col-md-6">
+
+                    <!-- Right Slider -->
+                    <div class="col-12 col-md-6">
                         <div class="intro-right-content d-flex justify-content-center align-items-center">
 
-                            <div class="swiper introSwiper">
+                            <div class="swiper introSwiper w-100">
+
                                 <div class="swiper-wrapper">
 
                                     <div class="swiper-slide">
-                                        <img src="images/home-intro-img.jpeg" class="img-fluid intro-image"
+                                        <img src="images/home-intro-img.jpeg" class="img-fluid w-100 intro-image"
                                             alt="Exhibition Stall Design">
                                     </div>
 
                                     <div class="swiper-slide">
-                                        <img src="images/home-intro-img2.jpeg" class="img-fluid intro-image"
+                                        <img src="images/home-intro-img2.jpeg" class="img-fluid w-100 intro-image"
                                             alt="Exhibition Stall">
                                     </div>
 
                                     <div class="swiper-slide">
-                                        <img src="images/home-intro-img3.jpeg" class="img-fluid intro-image"
+                                        <img src="images/home-intro-img3.jpeg" class="img-fluid w-100 intro-image"
                                             alt="Exhibition Design">
                                     </div>
 
                                     <div class="swiper-slide">
-                                        <img src="images/home-intro-img4.jpeg" class="img-fluid intro-image"
+                                        <img src="images/home-intro-img4.jpeg" class="img-fluid w-100 intro-image"
                                             alt="Exhibition Design">
                                     </div>
 
                                     <div class="swiper-slide">
-                                        <img src="images/home-intro-img5.jpeg" class="img-fluid intro-image"
+                                        <img src="images/home-intro-img5.jpeg" class="img-fluid w-100 intro-image"
                                             alt="Exhibition Design">
                                     </div>
+
                                 </div>
 
-                                <!-- Optional pagination -->
-                                <!-- <div class="swiper-pagination"></div> -->
                             </div>
 
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="container our-specialities mt-3">
@@ -1267,9 +1274,13 @@
 
         });
     </script>
+
     <script>
         const introSwiper = new Swiper(".introSwiper", {
+
             slidesPerView: 1,
+            spaceBetween: 0,
+
             loop: true,
 
             effect: "fade",
@@ -1281,13 +1292,50 @@
             autoplay: {
                 delay: 2000,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true
             },
 
             speed: 1000,
 
-            pagination: {
-                el: ".introSwiper .swiper-pagination",
-                clickable: true,
+            // pagination: {
+            //     el: ".introSwiper .swiper-pagination",
+            //     clickable: true
+            // },
+
+            observer: true,
+            observeParents: true,
+
+            breakpoints: {
+
+                /* Large Desktop */
+                1200: {
+                    slidesPerView: 1,
+                    speed: 1000
+                },
+
+                /* Desktop / Laptop */
+                992: {
+                    slidesPerView: 1,
+                    speed: 900
+                },
+
+                /* Tablet */
+                768: {
+                    slidesPerView: 1,
+                    speed: 800
+                },
+
+                /* Mobile */
+                576: {
+                    slidesPerView: 1,
+                    speed: 700
+                },
+
+                /* Small Mobile */
+                0: {
+                    slidesPerView: 1,
+                    speed: 600
+                }
             }
         });
     </script>
