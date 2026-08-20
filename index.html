@@ -287,8 +287,40 @@
                     </div>
                     <div class="col-md-6">
                         <div class="intro-right-content d-flex justify-content-center align-items-center">
-                            <img src="images/home-intro-img.jpeg" class="img-fluid my-5 my-md-0 intro-image"
-                                alt="intro-img">
+
+                            <div class="swiper introSwiper">
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                                        <img src="images/home-intro-img.jpeg" class="img-fluid intro-image"
+                                            alt="Exhibition Stall Design">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="images/home-intro-img2.jpeg" class="img-fluid intro-image"
+                                            alt="Exhibition Stall">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="images/home-intro-img3.jpeg" class="img-fluid intro-image"
+                                            alt="Exhibition Design">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="images/home-intro-img4.jpeg" class="img-fluid intro-image"
+                                            alt="Exhibition Design">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="images/home-intro-img5.jpeg" class="img-fluid intro-image"
+                                            alt="Exhibition Design">
+                                    </div>
+                                </div>
+
+                                <!-- Optional pagination -->
+                                <!-- <div class="swiper-pagination"></div> -->
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1233,6 +1265,30 @@
 
             }
 
+        });
+    </script>
+    <script>
+        const introSwiper = new Swiper(".introSwiper", {
+            slidesPerView: 1,
+            loop: true,
+
+            effect: "fade",
+
+            fadeEffect: {
+                crossFade: true
+            },
+
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+
+            speed: 1000,
+
+            pagination: {
+                el: ".introSwiper .swiper-pagination",
+                clickable: true,
+            }
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

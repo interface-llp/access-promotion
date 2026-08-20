@@ -504,6 +504,38 @@ body {
     color: var(--bs-primary);
 }
 
+.introSwiper {
+    width: 100%;
+    max-width: 650px;
+    overflow: hidden;
+}
+
+.introSwiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.introSwiper .swiper-pagination {
+    bottom: 10px;
+}
+
+.introSwiper .swiper-pagination-bullet {
+    background: var(--bs-white);
+    opacity: 0.6;
+}
+
+.introSwiper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
 .our-specialities .card {
     /* width: 400px; */
     height: 100px;
